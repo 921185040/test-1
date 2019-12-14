@@ -1,0 +1,43 @@
+.my-head {
+    padding: 0 50px 0 25px;
+    height: 50px; 
+    background: #1d459c; 
+    background: -ms-linear-gradient(left, #3ec2cf, #1d459c);
+    background: -moz-linear-gradient(left, #3ec2cf, #1d459c);
+    background: -webkit-linear-gradient( left, #3ec2cf, #1d459c);
+}
+.hd-left{
+    padding-top: 5px;
+    color: #fff;
+    font-size: 25px;
+    float: left;
+}
+.hd-right{
+    padding-top: 10px;
+    float: right;
+}
+.my-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: calc(100% - 50px);
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    min-width: 1280px;
+    min-height: 620px;
+  }
+  .aside-wrap {
+    flex-basis: 200px;
+    width: 200px;
+    position: relative;
+    height: 100%;
+    border-right:1px solid #001529;
+    color: rgba(255, 255, 255, 0.65);
+    background: #001529;
+  }
+  
