@@ -1,0 +1,47 @@
+.content{
+    padding:20px;
+    width: 1100px;
+}
+.first-content{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.title {
+    border-left: 5px solid lightblue;
+    padding-left: 10px;
+    font-size:20px;
+    color: black;
+}
+.detail{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid lightgray;
+    width:100%
+}
+.overview-item{
+    padding: 0 31% 21px 12%;
+}
+.line{
+    border-right: 1px solid #dbd1f4;
+}
+.item-left {
+    float: left;
+  }
+.payer{
+    color: #5b9bd1;
+    font-size: 50px !important;
+}
+.item-right {
+    text-align: center;
+  }
+  .right-count {
+    font-size: 25px;
+    height: 60px;
+    line-height: 64px;
+    margin: 0;
+}
+.right-unit {
+    font-size: 12px;
+    color: gray;
+}

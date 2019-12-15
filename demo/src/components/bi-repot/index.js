@@ -10,3 +10,12 @@ import React from "react";
 import { hashHistory } from "react-router";
 import axios from "axios";
 import echarts from "echarts";
+
+class ReportComponent extends React.Component{
+    render(){
+        return (
+            <div>fff</div>
+        )
+    }
+}
+export default ReportComponent;

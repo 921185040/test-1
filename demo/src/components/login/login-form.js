@@ -1,25 +1,49 @@
 /*
  * @Author: your name
  * @Date: 2019-12-12 16:44:25
- * @LastEditTime: 2019-12-13 15:24:30
+ * @LastEditTime: 2019-12-15 18:03:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\login\index.js
  */
 import React from 'react';
+import axios from "axios"
+import {withRouter} from "react-router-dom";
+import PropTypes from "prop-types";
 // import PropTypes from "proptypes"
 import '../../styles/login.css';
-import { Form, Icon, Input, Button } from 'antd';
+import { Form, Icon, Input, Button, message } from 'antd';
 import 'antd/dist/antd.css';
+import store from '../../redux/store'
+require('../../mock/mock')
 // import { message,Form, Icon, Input, Button, Checkbox} from 'antd';
 const FormItem = Form.Item;
 class myLoginForm extends React.Component {
+  static contextTypes = {
+    router: PropTypes.object
+  }
+  constructor(){
+    super();
+}
   handleSubmit (e) {
     e.preventDefault();
-    console.log('提交', e);
+    console.log('提交', this);
     let data = this.props.form.getFieldsValue();
-    // let history = this.context.router.history;
-    console.log('data',data);
+
+    // store.dispatch({type:'login',username:data.name})
+    // this.props.history.push("/index");
+    axios.post("/users",data).then((res) =>{
+      let resMsg = res.data;
+      if(data.name === "liudongzhi" && data.password==="liudongzhi"){
+          localStorage.setItem('username',data.name)
+          // store.dispatch({type:'login',username:data.name})
+          // history.push('index');
+          store.dispatch({type:'login',username:data.name})
+          this.props.history.push("/index");
+      }else{
+          message.error('用户或密码不正确')
+      }
+  })
     
   }
   render() {
@@ -67,6 +91,6 @@ class myLoginForm extends React.Component {
 //     router: PropTypes.object.isRequired
 // };
 let loginForm = Form.create()(myLoginForm)
-export default loginForm
+export default withRouter(loginForm)
 
 

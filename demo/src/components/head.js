@@ -1,12 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2019-12-13 14:57:36
- * @LastEditTime: 2019-12-13 16:34:06
+ * @LastEditTime: 2019-12-14 15:42:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\head.js
  */
 import React,{Component} from 'react';
+import {withRouter} from "react-router-dom";
 import {Button,Icon,Avatar,Divider  } from 'antd';
 import axios from 'axios';
 
@@ -14,8 +15,8 @@ import store from '../redux/store'
 import '../styles/head.css'
 
 class HeadComponent extends Component {
-    constructor (){
-        super();
+    constructor (props, context){
+        super(props,context);
         this.state = {
             text:'退出',
             color:'#7265e6',
@@ -33,10 +34,9 @@ class HeadComponent extends Component {
     }
 
     logout = (e) => {
+        console.log('点击退出',this)
         e.preventDefault();
-        axios.post("/user/logout",{}).then((res) =>{
-            console.log('res', res)
-        })
+        this.props.history.push("/login");
     }
 
     render(){
@@ -59,4 +59,4 @@ class HeadComponent extends Component {
 // HeadComponent.contextTypes = {
 //     router: React.PropTypes.object
 //   }
-export default HeadComponent
+export default withRouter(HeadComponent)

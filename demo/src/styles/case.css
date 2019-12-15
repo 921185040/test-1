@@ -1,0 +1,19 @@
+.content{
+    padding:20px;
+    width: 1100px;
+}
+.title {
+    border-left: 5px solid lightblue;
+    padding-left: 10px;
+    font-size:20px;
+    color: black;
+}
+.fixed-width {
+    width: 20%;
+    float: left;
+}
+.butclass{
+    position: relative;
+    top: 4px;
+    left: 20px  ;
+}

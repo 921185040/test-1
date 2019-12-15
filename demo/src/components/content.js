@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-13 16:11:44
- * @LastEditTime: 2019-12-13 16:33:18
+ * @LastEditTime: 2019-12-15 19:17:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\content.js
@@ -32,12 +32,12 @@ class ContentComponent extends Component {
                         >
                         <Menu.Item key="1">
                             <Link to="/index" replace>
-                            <Icon type="home" />首页
+                            <Icon type="home" />首页（mock数据）
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="2">
                             <Link to="/case" replace>
-                            <Icon type="mail" />案件列表
+                            <Icon type="mail" />账本（组件使用练习）
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="3">
