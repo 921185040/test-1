@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-13 16:11:44
- * @LastEditTime: 2019-12-15 19:17:21
+ * @LastEditTime: 2019-12-15 20:53:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\content.js
@@ -40,21 +40,21 @@ class ContentComponent extends Component {
                             <Icon type="mail" />账本（组件使用练习）
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="3">
+                        {/* <Menu.Item key="3">
                             <Link to="/repay" replace>
                             <Icon type="table" />还款列表
                             </Link>
-                        </Menu.Item>
-                        <Menu.Item key="4">
+                        </Menu.Item> */}
+                        <Menu.Item key="3">
                             <Link to="/bi-report" replace>
-                            <Icon type="bar-chart" />案件报表
+                            <Icon type="bar-chart" />收支报表
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="5">
+                        {/* <Menu.Item key="5">
                             <Link to="/user" replace>
                             <Icon type="team" />用户列表
                             </Link>
-                        </Menu.Item>  
+                        </Menu.Item>   */}
                         </Menu>
                     </div>
                 </div>

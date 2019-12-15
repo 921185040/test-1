@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-13 11:49:38
- * @LastEditTime: 2019-12-15 19:19:38
+ * @LastEditTime: 2019-12-15 20:49:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\router\index.js
@@ -25,7 +25,7 @@ import UserCM from '../components/user/index';
 // 账本
 import CaseCM from '../components/case/index';
 // 报表
-import BiPortCM from '../components/bi-repot/index'
+import BiPortCM from '../components/report/index'
 // 界面头部
 import HeadCM from '../components/head';
 //菜单

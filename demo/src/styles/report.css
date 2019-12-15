@@ -1,0 +1,10 @@
+.content{
+    padding:20px;
+    width: 1100px;
+}
+.title {
+    border-left: 5px solid lightblue;
+    padding-left: 10px;
+    font-size:20px;
+    color: black;
+}
