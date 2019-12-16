@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-15 17:53:35
- * @LastEditTime: 2019-12-15 20:34:13
+ * @LastEditTime: 2019-12-16 10:15:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\mock\mock.js
@@ -63,4 +63,19 @@ Mock.mock('/casePage/caseList',
     ]
   }
 )
+Mock.mock('/caseManage/getAnalysisData',{
+  'data':[
+    {'month':'12月','income':'7909','outcome':'5464'},
+    {'month':'10月','income':'7888','outcome':'3564'},
+    {'month':'9月','income':'8988','outcome':'4355'},
+    {'month':'8月','income':'8907','outcome':'3255'},
+    {'month':'7月','income':'17400','outcome':'3456'},
+    {'month':'6月','income':'4453','outcome':'5342'},
+    {'month':'5月','income':'10240','outcome':'4535'},
+    {'month':'4月','income':'8867','outcome':'2345'},
+    {'month':'3月','income':'7888','outcome':'1456'},
+    {'month':'2月','income':'9777','outcome':'1222'},
+    {'month':'1月','income':'8344','outcome':'2333'},
+  ]
+})
 export default Mock;

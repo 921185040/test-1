@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-13 16:11:44
- * @LastEditTime: 2019-12-15 20:53:47
+ * @LastEditTime: 2019-12-16 10:12:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\content.js
@@ -47,7 +47,7 @@ class ContentComponent extends Component {
                         </Menu.Item> */}
                         <Menu.Item key="3">
                             <Link to="/bi-report" replace>
-                            <Icon type="bar-chart" />收支报表
+                            <Icon type="bar-chart" />收支报表（echarts练习）
                             </Link>
                         </Menu.Item>
                         {/* <Menu.Item key="5">
