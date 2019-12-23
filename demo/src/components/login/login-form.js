@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-12 16:44:25
- * @LastEditTime: 2019-12-15 18:03:24
+ * @LastEditTime: 2019-12-17 15:10:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\login\index.js
@@ -27,11 +27,7 @@ class myLoginForm extends React.Component {
 }
   handleSubmit (e) {
     e.preventDefault();
-    console.log('提交', this);
     let data = this.props.form.getFieldsValue();
-
-    // store.dispatch({type:'login',username:data.name})
-    // this.props.history.push("/index");
     axios.post("/users",data).then((res) =>{
       let resMsg = res.data;
       if(data.name === "liudongzhi" && data.password==="liudongzhi"){

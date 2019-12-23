@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-14 14:33:02
- * @LastEditTime: 2019-12-16 10:10:51
+ * @LastEditTime: 2019-12-17 15:13:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\bi-repot\bi-report.js
@@ -152,7 +152,7 @@ class ReportComponent extends React.Component{
                 <div className="content">
                     <div className='title'>收支报表</div>
                     <div className="bd-main">
-                        {/* echarts分案图 */}
+                        {/* echarts图 */}
                         <div ref="echarts" style={{ width: '100%', height: 600 }} id="echarts"></div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-15 19:19:35
- * @LastEditTime: 2019-12-15 20:29:10
+ * @LastEditTime: 2019-12-17 15:08:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\case\index.js
@@ -24,7 +24,6 @@ class MyCaseComponent extends React.Component{
     constructor(props){
         super(props)
     }
-
     
     render () {
         const { getFieldDecorator} = this.props.form;
