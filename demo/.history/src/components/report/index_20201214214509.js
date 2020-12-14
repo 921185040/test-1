@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-14 14:33:02
- * @LastEditTime: 2020-12-14 22:16:13
+ * @LastEditTime: 2020-12-14 21:45:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\bi-repot\bi-report.js
@@ -10,18 +10,18 @@ import React from "react";
 // import { hashHistory } from "react-router";
 import axios from "axios";
 import echarts from "echarts";
-import { Button, Modal, Form, Input, Radio, Select,Cascader ,message, Breadcrumb } from "antd";
+import { Button, Modal, Form, Input, Radio, Select,Cascader ,message } from "antd";
 
 class ReportComponent extends React.Component{
     constructor(props){
       super(props)
       this.state ={
         pictrueData:[],
-        reportShow: 'block',
-        mapShow: 'none',
+        reportHight: 600
       }
     }
     componentDidMount(){
+        console.log('fff',this.refs.echarts)
         axios.post('/caseManage/getAnalysisData').then(res=>{
           console.log('res',res)
           if(res){
@@ -150,117 +150,19 @@ class ReportComponent extends React.Component{
     }
 
 
-    handleReport(re){
-      console.log('??', re)
-      this.setState({reportShow: 'block', mapShow: 'none'})
-      this.drawChat()
-    }
+    handleReport(){
 
-    handleSearch(){
-      this.setState({reportShow: 'none', mapShow: 'block'})
-      const myChart = echarts.init(document.getElementById('map'));
-
-   
-
-      const option = {
-        title: {
-            text: 'Graph 简单示例'
-        },
-        tooltip: {},
-        animationDurationUpdate: 1500,
-        animationEasingUpdate: 'quinticInOut',
-        series: [
-            {
-                type: 'graph',
-                layout: 'none',
-                symbolSize: 50,
-                roam: true,
-                label: {
-                    show: true
-                },
-                edgeSymbol: ['circle', 'arrow'],
-                edgeSymbolSize: [4, 10],
-                edgeLabel: {
-                    fontSize: 20
-                },
-                data: [{
-                    name: '节点1',
-                    x: 300,
-                    y: 300
-                }, {
-                    name: '节点2',
-                    x: 800,
-                    y: 300
-                }, {
-                    name: '节点3',
-                    x: 550,
-                    y: 100
-                }, {
-                    name: '节点4',
-                    x: 550,
-                    y: 500
-                }],
-                // links: [],
-                links: [{
-                    source: 0,
-                    target: 1,
-                    symbolSize: [5, 20],
-                    label: {
-                        show: true
-                    },
-                    lineStyle: {
-                        width: 5,
-                        curveness: 0.2
-                    }
-                }, {
-                    source: '节点2',
-                    target: '节点1',
-                    label: {
-                        show: true
-                    },
-                    lineStyle: {
-                        curveness: 0.2
-                    }
-                }, {
-                    source: '节点1',
-                    target: '节点3'
-                }, {
-                    source: '节点2',
-                    target: '节点3'
-                }, {
-                    source: '节点2',
-                    target: '节点4'
-                }, {
-                    source: '节点1',
-                    target: '节点4'
-                }],
-                lineStyle: {
-                    opacity: 0.9,
-                    width: 2,
-                    curveness: 0
-                }
-            }
-        ]
-    };
-      myChart.setOption(option);
     }
 
     render(){
         return (
             <>
                 <div className="content">
-                    <Breadcrumb>
-                      <Breadcrumb.Item >
-                        <a onClick={(re)=>this.handleReport(re)}>报表</a>
-                      </Breadcrumb.Item>
-                      <Breadcrumb.Item >
-                        <a onClick={()=>this.handleSearch()}>地图定点</a>
-                      </Breadcrumb.Item>
-                    </Breadcrumb>
+                    <Button type="primary" onClick={()=>this.handleReport()}>报表</Button>
+                    <Button type="primary" onClick={this.handleSearch}>地图定点</Button>
                     <div>
                         {/* echarts图 */}
-                        <div ref="echarts" style={{display: this.state.reportShow, width: 1000, height: 600 }} id="echarts"></div>
-                        <div style={{display: 'block', width: '100%', height: 600 }} id="map"></div>
+                        <div ref="echarts" style={{display: 'none', width: '100%', height: this.state.reportHight }} id="echarts"></div>
                     </div>
                 </div>
             </>

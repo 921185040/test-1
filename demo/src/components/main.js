@@ -9,7 +9,8 @@
 import React from 'react';
 import { hashHistory } from 'react-router'
 import { Row, Col } from 'antd';
-import axios from 'axios'
+import axios from 'axios';
+
 
 import '../styles/main.css'
 import '../styles/icons/incons.css'

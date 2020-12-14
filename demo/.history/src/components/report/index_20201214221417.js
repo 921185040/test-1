@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-14 14:33:02
- * @LastEditTime: 2020-12-14 22:16:13
+ * @LastEditTime: 2020-12-14 22:14:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\bi-repot\bi-report.js
@@ -17,7 +17,7 @@ class ReportComponent extends React.Component{
       super(props)
       this.state ={
         pictrueData:[],
-        reportShow: 'block',
+        reportShow: 'none',
         mapShow: 'none',
       }
     }
@@ -26,7 +26,7 @@ class ReportComponent extends React.Component{
           console.log('res',res)
           if(res){
             this.setState({pictrueData:res.data.data})
-            this.drawChat()
+            // this.drawChat()
           }
         })
 
@@ -259,7 +259,7 @@ class ReportComponent extends React.Component{
                     </Breadcrumb>
                     <div>
                         {/* echarts图 */}
-                        <div ref="echarts" style={{display: this.state.reportShow, width: 1000, height: 600 }} id="echarts"></div>
+                        {/* <div ref="echarts" style={{display: this.state.reportShow, width: '100%', height: 600 }} id="echarts"></div> */}
                         <div style={{display: 'block', width: '100%', height: 600 }} id="map"></div>
                     </div>
                 </div>

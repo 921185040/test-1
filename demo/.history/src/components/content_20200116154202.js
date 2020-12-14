@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2019-12-13 16:11:44
- * @LastEditTime: 2020-12-14 22:18:30
- * @LastEditors: Please set LastEditors
+ * @LastEditTime : 2020-01-16 15:42:03
+ * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\components\content.js
  */
@@ -46,9 +46,7 @@ class ContentComponent extends Component {
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="4">
-                            <Link to="/counter" replace>
-                            <Icon type="bar-chart" />animate实例
-                            </Link>
+                            <Link to="/counter" replace></Link>
                         </Menu.Item>
                         </Menu>
                     </div>

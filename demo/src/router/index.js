@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2019-12-13 11:49:38
- * @LastEditTime: 2019-12-15 20:49:26
- * @LastEditors: Please set LastEditors
+ * @LastEditTime : 2020-01-16 15:44:25
+ * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demo\src\router\index.js
  */
@@ -24,6 +24,8 @@ import LoginCM from '../components/login/index'
 import UserCM from '../components/user/index';
 // 账本
 import CaseCM from '../components/case/index';
+// 计数器
+import CounterCM from '../components/counter/index'
 // 报表
 import BiPortCM from '../components/report/index'
 // 界面头部
@@ -61,14 +63,10 @@ const RouterLists = (
                 </Switch>
                 <Switch>
                     <Route path="/index" component={MainCM} />
-                    {/*
-                    <Route path="/message" component={MessageCM} />
-                    
-                    <Route path="/repay" component={RepayCM} />
-                      */}
                     <Route path="/bi-report" component={BiPortCM}/>
                     <Route path="/case" component={CaseCM} />
                     <Route path="/user" component={UserCM} />
+                    <Route path="/counter" component={CounterCM}/>
                     <Redirect path="/" exact replace to="/login" />
                 </Switch>
             </RouterList>
